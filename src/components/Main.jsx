@@ -3,11 +3,16 @@ import { useState } from "react";
 function Main() {
   const [open, setOpen] = useState(false); //Ignore this state
   const [answersList, setAnswersList] = useState([]);
+  const [duckColorRating, setDuckColorRating] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     console.log("I'm submiting");
+  };
+
+  const handleChange = () => {
+    console.log("Im changing when you click me!");
   };
 
   return (
@@ -25,19 +30,43 @@ function Main() {
             {/* <!-- Radio inputs go here --> */}
             <ul>
               <li>
-                <input id="color-one" type="radio" name="color" value="1" />
+                <input
+                  id="color-one"
+                  type="radio"
+                  name="color"
+                  value="1"
+                  onChange={handleChange}
+                />
                 <label for="color-one">1</label>
               </li>
               <li>
-                <input id="color-two" type="radio" name="color" value="2" />
+                <input
+                  id="color-two"
+                  type="radio"
+                  name="color"
+                  value="2"
+                  onChange={handleChange}
+                />
                 <label for="color-two">2</label>
               </li>
               <li>
-                <input id="color-three" type="radio" name="color" value="3" />
+                <input
+                  id="color-three"
+                  type="radio"
+                  name="color"
+                  value="3"
+                  onChange={handleChange}
+                />
                 <label for="color-three">3</label>
               </li>
               <li>
-                <input id="color-four" type="radio" name="color" value="4" />
+                <input
+                  id="color-four"
+                  type="radio"
+                  name="color"
+                  value="4"
+                  onChange={handleChange}
+                />
                 <label for="color-four">4</label>
               </li>
             </ul>
